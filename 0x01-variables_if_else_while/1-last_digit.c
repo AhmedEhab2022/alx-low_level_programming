@@ -5,10 +5,10 @@
 /**
  * main - Entry point
  *
- * Descripsion: print the last digit of n and check if it is grater than 5, if it is equal 0 and less than 6 or not
+ * Descripsion: print the last digit of n and check the condition
  *
- * Return: Always 0 (sucsess)    
- */ 
+ * Return: Always 0 (sucsess)
+ */
 int main(void)
 {
 	int n, last_digit;
