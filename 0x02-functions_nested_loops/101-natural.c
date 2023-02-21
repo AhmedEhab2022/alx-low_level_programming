@@ -9,26 +9,17 @@
  */
 int main(void)
 {
-	int num1, num2, multipl3, sum3, sum5, multipl5;
+	int i;
+	int sum = 0;
 
-	sum3 = 0;
-	num2 = 1;
-	num1 = 1;
-	multipl3 = 0;
-	sum5 = 0;
-	multipl5 = 0;
-	while (multipl3 < 341)
+	for (i = 0; i < 1024; i++)
 	{
-		multipl3 = 3 * num1;
-		sum3 += multipl3;
-		num1++;
+		if (i % 3 == 0 || i % 5 == 0)
+		{
+			sum += i;
+		}
+
 	}
-	while (multipl5 < 204)
-	{
-		multipl5 = 5 * num2;
-		sum5 += multipl5;
-		num2++;
-	}
-	printf("%d\n", (sum3 + sum5));
+	printf("%d\n", sum);
 	return (0);
 }
