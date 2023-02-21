@@ -27,7 +27,7 @@ int main(void)
 	{
 		multipl5 = 5 * num2;
 		sum5 += multipl5;
-		nu2m++;
+		num2++;
 	}
 	printf("%d\n", (sum3 + sum5));
 	return (0);
