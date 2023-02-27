@@ -12,7 +12,7 @@ void puts_half(char *str)
 	int i;
 
 	if (j % 2 != 0)
-		i = ((j - 1) / 2);
+		i = ((j - 1) / 2) + 1;
 	else
 		i = j / 2;
 	while (i <= j - 1)
