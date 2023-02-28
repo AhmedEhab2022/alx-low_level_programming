@@ -20,20 +20,15 @@ int _atoi(char *s)
 		if (s[i] >= '0' && s[i] <= '9')
 		{
 			if (num == 214748364 && s[i] == '8')
-				num = num * 10 - (s[i] - 48);
-				num -= 16;
+				num = -(num * 10 + (s[i] - 48));
 			else
 				num = num * 10 + (s[i] - 48);
-			if (num == 214748364 && neg_count % 2 != 0)
-				num *= -1;
 		}
 		else if (s[i] == '-' && num == 0)
 			neg_count++;
 		else if (!(s[i] >= '0' && s[i] <= '9') && (num > 0))
 			break;
 	}
-	if (num > -2147483648 && num <= -214748364)
-		num *= -1;
 	if (neg_count % 2 != 0 && num != -2147483648)
 		num = num * -1;
 	return (num);
