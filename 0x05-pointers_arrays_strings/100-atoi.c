@@ -19,7 +19,10 @@ int _atoi(char *s)
 	{
 		if (s[i] >= '0' && s[i] <= '9')
 		{
-			num = num * 10 + (s[i] - 48);
+			if (num == 214748364 && s[i] == '8')
+				num = num * 10 - (s[i] - 48);
+			else
+				num = num * 10 + (s[i] - 48);
 			if (num == 214748364 && neg_count % 2 != 0)
 				num *= -1;
 		}
