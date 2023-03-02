@@ -1,1 +1,1 @@
-this repo will do projects with C language by shell script
+this repo will do projects with C language
