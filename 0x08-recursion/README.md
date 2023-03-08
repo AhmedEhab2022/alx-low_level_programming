@@ -1,6 +1,6 @@
 # Recursion
 
-Projects:
+Tasks:
 
 * 0-puts_recursion.c
 
