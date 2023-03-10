@@ -3,7 +3,7 @@
 #define UNUSED(x) (void)(x)
 
 /**
- * main - Entry point
+ * main - Display The number of arguments expect name of the file
  *
  * @argc: The counter of The arguments
  * @argv: The array of passed arguments
