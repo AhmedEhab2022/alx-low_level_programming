@@ -2,7 +2,7 @@
 #include <stdlib.h>
 
 /**
- * main - Entry point
+ * main - Display The name of the excutable file
  *
  * @argc: The counter of The arguments
  * @argv: The array of passed arguments
