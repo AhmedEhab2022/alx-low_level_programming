@@ -2,7 +2,7 @@
 #include <stdlib.h>
 
 /**
- * main - Entry point
+ * main - Multiplies two numbers
  *
  * @argc: The counter of The arguments
  * @argv: The array of passed arguments
