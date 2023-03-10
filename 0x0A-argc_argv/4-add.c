@@ -1,6 +1,27 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <ctype.h>
+#include <string.h>
+
+/**
+ * check_for_nums - check for numbers in string
+ *
+ * @s: The string
+ *
+ * Return: 0 if The string is a numbers, 1 otherwise
+ */
+int check_for_nums(char *s)
+{
+	int len, j;
+
+	len = strlen(s);
+	for (j = 0; j < len; j++)
+	{
+		if (!(s[j] >= '0' && s[j] <= '9'))
+			return (1);
+	}
+	return (0);
+}
 
 /**
  * main - add positive numbers
@@ -17,7 +38,7 @@ int main(int argc, char *argv[])
 	add_pos = 0;
 	for (i = 1; i < argc; i++)
 	{
-		if (!(isdigit(atoi(argv[i]))))
+		if (check_for_nums(argv[i]))
 		{
 			printf("Error\n");
 			return (1);
