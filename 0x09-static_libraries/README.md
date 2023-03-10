@@ -1,11 +1,5 @@
-# Static Libraries
+# create_static_lib.sh
 
-Tasks:
-
-* libmy.a
-
-Create the static library libmy.a.
-
-* create_static_lib.sh
-
-A script called create_static_lib.sh that creates a static library called liball.a from all the .c files that are in the current directory.
+* compile all .c files to object files
+* archive all object files in libarary called liball.a
+* indexes all object files
