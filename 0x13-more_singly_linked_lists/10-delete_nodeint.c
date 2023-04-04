@@ -31,9 +31,8 @@ int delete_nodeint_at_index(listint_t **head, unsigned int index)
 	}
 	if (index == 0)
 	{
-		req_node = (*head)->next;
-		free(head);
-		*head = req_node;
+		*head = (*head)->next;
+		free(tmp);
 		return (1);
 	}
 
