@@ -15,10 +15,11 @@ int delete_nodeint_at_index(listint_t **head, unsigned int index)
 	unsigned int i;
 	listint_t *tmp, *req_node;
 
-	if (head == NULL || *head == NULL)
+	if (*head == NULL)
 		return (-1);
 
 	tmp = *head;
+
 	if (index != 0)
 	{
 		for (; i < index - 1 && tmp != NULL; i++)
