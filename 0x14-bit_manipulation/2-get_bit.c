@@ -14,6 +14,10 @@ int get_bit(unsigned long int n, unsigned int index)
 	char *bin;
 	unsigned int i = 0;
 
+	if (index >= sizeof(unsigned long int) * 8)
+	{
+		return (-1);
+	}
 	bin = malloc(sizeof(char) * n);
 
 	if (bin == NULL)
