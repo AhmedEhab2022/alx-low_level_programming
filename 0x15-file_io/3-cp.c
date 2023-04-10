@@ -25,6 +25,11 @@ int main(int argc, char *argv[])
 		exit(97);
 	}
 	buffer = malloc(1024);
+	if (buffer == NULL)
+	{
+		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
+		exit(99);
+	}
 	fd1 = open(argv[1], O_RDONLY);
 	r = read(fd1, buffer, 1024);
 	if (fd1 < 0 || r < 0)
@@ -49,8 +54,6 @@ int main(int argc, char *argv[])
 		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd2);
 		exit(100);
 	}
-	close(fd1);
-	close(fd2);
-	free(buffer);
+	close(fd1), close(fd2), free(buffer);
 	return (0);
 }
