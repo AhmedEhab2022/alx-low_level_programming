@@ -53,13 +53,13 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	if (ht == NULL || key == NULL || strcmp(key, "") == 0 || value == NULL)
 		return (0);
 
-	item = create_item(key, value);
-	if (item == NULL)
-		return (0);
-
 	index = key_index((const unsigned char *)key, ht->size);
 	if (ht->array[index] == NULL)
 	{
+		item = create_item(key, value);
+		if (item == NULL)
+			return (0);
+
 		item->next = NULL;
 		ht->array[index] = item;
 	}
@@ -68,6 +68,10 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 
 	else
 	{
+		item = create_item(key, value);
+		if (item == NULL)
+			return (NULL);
+
 		item->next = ht->array[index];
 		ht->array[index] = item;
 	}
