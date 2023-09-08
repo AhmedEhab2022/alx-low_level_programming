@@ -11,14 +11,21 @@
  */
 char *hash_table_get(const hash_table_t *ht, const char *key)
 {
+	hash_node_t *hn;
 	unsigned long int index;
 
 	if (ht == NULL || key == NULL || *key == '\0')
 		return (NULL);
 
 	index = key_index((const unsigned char *)key, ht->size);
-	if (ht->array[index] == NULL)
-		return (NULL);
 
-	return (ht->array[index]->value);
+	hn = ht->array[index];
+	while (hn)
+	{
+		if (strcmp(hn->key, key) == 0)
+			return (hn->value);
+
+		hn = hn->next;
+	}
+	return (NULL);
 }
