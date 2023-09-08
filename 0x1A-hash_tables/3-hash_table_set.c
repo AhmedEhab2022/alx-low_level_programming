@@ -70,7 +70,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	{
 		item = create_item(key, value);
 		if (item == NULL)
-			return (NULL);
+			return (0);
 
 		item->next = ht->array[index];
 		ht->array[index] = item;
